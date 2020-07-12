@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)https://tmtimer.calebgrove.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="viewport" content="width = device-width, initial-scale = 1.00, minimum-scale = 1.00, maximum-scale = 1.00">
+		<link rel="icon" type="image/png" href="https://tmtimer.calebgrove.com/favicon.png">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-title" content="Speech Timer">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="description" content="Time your speeches at home with this easy to use online Toastmasters speech timer.">
+		<title>Speech Timer for Speaker Nest</title>
+		<script type="text/javascript" async="" src="./analytics.js.download"></script><script src="./CSSPlugin.min.js.download"></script>
+		<script src="./TweenLite.min.js.download"></script>
+		<link href="./styles.css" rel="stylesheet" type="text/css">
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async="" src="./js"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'UA-21273781-26');
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div class="sidebar" id="sidebar">
+				<div id="hideAway">
+					<div class="section" id="predefined">
+						<label class="option"><input type="radio" name="predefinedOption" value="tableTopics" id="tabletopics" checked="checked"><span class="label">Debater (4 min)</span></label>
+						<label class="option"><input type="radio" name="predefinedOption" value="evaluation" id="evaluation"><span class="label">Questions (30 Sec)</span></label>
+						<label class="option"><input type="radio" name="predefinedOption" value="icebreaker" id="icebreaker"><span class="label">Rebuttals (1 min)</span></label>
+						<label class="option"><input type="radio" name="predefinedOption" value="speech" id="speech"><span class="label">Guest Opinion (1:30 min)</span></label>
+						<label class="option"><input type="radio" name="predefinedOption" value="Impromptu" id="speech"><span class="label">Impromptu (2:30 min)</span></label>
+					</div>
+					<div class="section" id="custom" style="display:none">
+						<label class="option">Green light:
+							<input type="text" onkeypress="validateWatch(this)" onblur="validateThis(this)" id="customGreenLight" value="4:00">
+							<div class="tooltip">Format: <code>mm:ss</code></div>
+						</label>
+						<label class="option">Yellow light:
+							<input type="text" onkeypress="validateWatch(this)" onblur="validateThis(this)" id="customYellowLight" value="4:01">
+							<div class="tooltip">Format: <code>mm:ss</code></div>
+						</label>
+						<label class="option">Red light:
+							<input type="text" onkeypress="validateWatch(this)" onblur="validateThis(this)" id="customRedLight" value="4:01">
+							<div class="tooltip">Format: <code>mm:ss</code></div>
+						</label>
+						<label class="option">Pls Stop:
+							<input type="text" onkeypress="validateWatch(this)" onblur="validateThis(this)" id="customDq" value="4:01">
+							<div class="tooltip">Format: <code>mm:ss</code></div>
+						</label>
+					</div>
+
+					<div class="section" id="settings">
+						<label class="option">
+							<input type="checkbox" id="showClock" checked="">
+							<span class="label">Show Clock</span>
+						</label>
+					</div>
+
+				</div>
+				<div id="controls">
+					<button class="section option" id="controlButton">Start</button>
+					<button class="section option" id="resetButton">Reset</button>
+				</div>
+			</div>
+			<div class="clockWrapper" id="clockWrapper">
+				<div class="clockInnerWrapper">
+					<span class="clock" id="clock" style="font-size: 269.8px;">00:00</span>
+				</div>
+			</div>
+			<div class="grower" id="grower"></div>
+		</div>
+		<button id="infoButton" style="right: 100px;top: -2px;">i</button>
+		<section id="info">
+			<div class="info__inner">
+				<h1>Speakers Nest Speech Timer</h1>
+				
+				<img class="gb_ua" src="unnamed.jpg" alt="" style="width:400px;height:400px"/>
+			</div>
+		</section>
+		<img class="gb_ua" src="unnamed.jpg" alt="" style="width:150px;height:150px;position: fixed;bottom: 25px; left: 25px;"/>
+		<script>
+			if('serviceWorker' in navigator) {
+				navigator.serviceWorker
+				.register('sw.js')
+				.then(function() { console.log("Service Worker Registered"); });
+			}
+		</script>
+	
+	<script src="./app.js.download"></script>
+
+</body></html>
